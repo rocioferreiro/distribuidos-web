@@ -8,21 +8,20 @@ function SearchBar(props) {
         <div className="component-search-input">
             <div className="input-container" id={'test-div'}>
                 <input
-                    data-testid={"search-input-id"}
                     type="text"
                     id="action-search"
-                    placeholder="Search Action"
+                    placeholder="Search Product"
                     maxLength= {30}
                     minLength= {2}
                     onChange={event => props.handleSearch(event.target.value)}
                 />
             </div>
             <button
-                data-testid={"search-button-id"}
                 type="submit"
                 id={'search-button'}
                 onClick={() => props.handleSubmit()}
                 value="Search">
+              <SearchIcon/>
             </button>
         </div>
     )
