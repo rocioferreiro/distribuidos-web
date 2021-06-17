@@ -10,8 +10,8 @@ const Router = () => {
       <Switch>
         <Route path={"/products"} exact component={Search}/>
         <Route path={"/geo"} exact component={GeoClient}/>
-        <Route path={"/login"} exact component={Login}/>
-        <Route path={"/"} exact component={MainPage}/>
+        <Route path={"/main"} exact component={MainPage}/>
+        <Route path={"/"} exact component={Login}/>
       </Switch>
     </BrowserRouter>
   )

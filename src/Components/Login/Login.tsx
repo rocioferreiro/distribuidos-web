@@ -82,11 +82,10 @@ const Login = () => {
 
   const handleLogin = () => {
     const user: User = {email: state.email, password: state.password};
-    post( "login", user, {noAuth: true}).then(
+    post( "authService", user, {noAuth: true}).then(
       (response) => {
-        document.cookie=`token=${response.token.token};`
         localStorage.setItem('id', response.id)
-        history.push('/')
+        history.push('/main')
       }
     ).catch(error => {
       console.log(error)

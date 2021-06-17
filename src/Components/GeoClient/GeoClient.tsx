@@ -11,9 +11,10 @@ const GeoClient = () => {
   }
 
   const handleSubmit = () => {
-    getWithBody('geoService/', ip)
+    getWithBody('geoService/', ip).then(res => {
+      setResult(res)
+    })
   }
-
 
   return (
     <div>
