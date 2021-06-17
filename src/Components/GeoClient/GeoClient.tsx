@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {Button} from "@material-ui/core";
-
+import {getWithBody} from "../http"
 const GeoClient = () => {
 
   const [ip, setIp] = useState<string>('');
@@ -11,8 +11,7 @@ const GeoClient = () => {
   }
 
   const handleSubmit = () => {
-    //TODO: change to grpc
-    setResult('result');
+    getWithBody('geoService/', ip)
   }
 
 
